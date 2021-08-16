@@ -1,0 +1,122 @@
+.telas-criar-quizz {
+    font-size: 20px;
+    background-color: #e5e5e5;
+    width: 100vw;
+    min-height: 100vh;
+    margin-bottom: 70px;
+}
+.titulo-criar-quizz {
+    margin: 40px auto 20px auto;
+
+}
+
+.telas-criar-quizz ul {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0 20px 0;
+}
+.criar-quizz-comeco ul{
+    height:256px;
+}
+
+.telas-criar-quizz li {
+    margin: 5px auto;
+}
+.telas-criar-quizz li input,
+.criar-quizz-niveis li textarea {
+    font-size: 19px;
+    width: 92vw;
+    color: #686868;
+    font-style: italic;
+    margin: 0 auto;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+.telas-criar-quizz li input {
+    height: 46px;
+}
+.subtitulo-criar-quizz {
+    display: inline-block;
+    width: 92vw;
+    margin-top: 20px !important;
+}
+.botao-criacao-quizz {
+    margin: 10px auto 0 auto;
+    color: white;
+    background-color: #EC362D;
+    height: 54px;
+    width: auto;
+    box-sizing: content-box;
+    padding: 0 30px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.respiro-li {
+    margin-bottom: 20px !important;
+}
+
+.adicionar-perguntas,
+.adicionar-niveis {
+    background-color: white;
+    margin-top: 20px;
+    width: 100vw;
+    min-height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc((100vw - 92vw) / 2);
+}
+.adicionar-perguntas ion-icon {
+    font-size: 26px;
+}
+.criar-quizz-niveis ul textarea {
+    height: 241px;
+    font-family: 'Roboto', sans-serif;
+}
+.img-quizz-criado {
+    margin: 10px auto;
+    background-image: url("../assets/hogwarts.png");
+    background-size: 100%;
+    width: 92vw;
+    height: 241px;
+    border-radius: 5px;
+}
+.criar-quizz-final > span {
+    text-align: center;
+    color: #818181;
+    font-size: 18px;
+}
+
+
+
+@media (min-width: 1100px) {
+    .telas-criar-quizz {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subtitulo-criar-quizz {
+        width: 564px;
+    }
+    .telas-criar-quizz li input,
+    .criar-quizz-niveis li textarea {
+        width: 564px;
+    } 
+    .adicionar-perguntas,
+    .adicionar-niveis {
+        width: 601px;
+    }
+
+    .img-quizz-criado {
+        width: 500px;
+    }
+}

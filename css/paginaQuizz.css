@@ -1,0 +1,213 @@
+.pagina-quizz{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+   
+}
+.topo-quizz{
+    width: 100vw;
+    height: 142px;
+    background-image: url("../assets/hogwarts.png");
+    background-size: 100%;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.topo-quizz p{
+    z-index: 2;
+    word-wrap: break-word;
+}
+.fundo{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 212px;
+    background-color: black;
+    opacity: 0.6;
+    /* z-index: -6; */
+}
+
+.pergunta-quizz-conteiner{
+    margin: 24px 0;
+    padding: 24px 0;
+    /* height: 436px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.pergunta-quizz{
+    min-height: 100px;
+    width: 90vw;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+    background-color: #000000;
+    
+}
+.pergunta-quizz p{
+    word-wrap: break-word;
+    width: 90vw;
+}
+.respostas-conteiner{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.opcao-resposta img{
+    width: 43vw;
+    height: 25vh;
+}
+.opcao-resposta{
+    margin: 13px 0 5px 0;
+}
+.opcao-resposta p{
+    word-wrap: break-word;
+    width: 43vw;
+    color: #000000;
+}
+
+.resposta-correta p{
+    color: #009c22;
+    opacity: 0.3;
+}
+.resposta-correta img, .resposta-incorreta img{
+    opacity: 0.3;
+}
+.resposta-incorreta p{
+    color: #ff0b0b;
+    opacity: 0.3;
+}
+
+.esconder img, .esconder p{
+    opacity: 1;
+    color: #000000;
+}
+.marcado img, .marcado p{
+    opacity: 1;
+}
+
+
+.final-quizz-conteiner{
+    margin: 24px 0;
+    height: 500px;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+}
+.final-quizz{
+    height: 100px;
+    width: 90vw;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center;
+}
+.imagem-final{
+    width: 90vw;
+    height: 255px;
+    margin-top: 9px;
+}
+.imagem-final img{
+    width: 90vw;
+    height: 255px;
+}
+.imagem-final p{
+    margin-top: 5px;
+    color: #484848;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    height: 96px;
+    margin-bottom: 14px;
+}
+.reiniciar-quizz{
+    width: 220.32px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    color: #fff5f4;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 40px;
+}
+.voltar-home{
+    width: 220.32px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    margin-top: 8px;
+    color: #818181;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+.opcao-resposta:active, .voltar-home:active, .reiniciar-quizz:active{
+    transform: scale(0.97);
+    transition: transform .4s;
+}
+
+
+@media (min-width: 1100px) {
+    .pergunta-quizz, .respostas-conteiner{
+        width: 50vw;
+    }
+    .pergunta-quizz-conteiner{
+        height: 676px;
+    }
+    .opcao-resposta{
+        width: 23vw;
+        word-wrap: break-word;
+    }
+    .opcao-resposta img{
+        width: 23vw;
+        height: 175px;
+    }
+    .opcao-resposta p{
+        font-weight: bold;
+        width: 23vw;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 10px;
+        word-wrap: break-word;
+    }
+    .final-quizz, .imagem-final{
+        width: 50vw;
+    }
+    .imagem-final{
+        display: flex;
+    }
+    
+    .imagem-final img{
+        width: 25vw;
+    }
+    .imagem-final p{
+        margin-left: 21px;
+        font-size: 19px;
+        font-weight: bold;
+        line-height: 25px;
+        margin-top: 18px;
+    }
+    .reiniciar-quizz, .voltar-home{
+        width: 220px;
+        
+    }
+}

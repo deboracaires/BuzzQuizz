@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/criacaoQuizz.css">
+    <link rel="stylesheet" href="css/listaQuizzes.css">
+    <link rel="stylesheet" href="css/paginaQuizz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/buzzquizz.png" type="image/x-icon">
+    
+    <title>BuzzQuizz</title>
+</head>
+<body>
+    <header class="vermelho"><strong>BuzzQuizz</strong></header>
+
+
+    <!-- LISTA DE QUIZZES -->
+    <main class="lista-quizzes">
+        <section class="seus-quizzes">
+            <div class="perfil-sem-quizzes ">
+                <span>Você não criou nenhum quizz ainda :(</span>
+                <div class="botao-criar-quizz" onclick="criarQuizzComeco()">Criar Quizz</div>
+            </div>
+
+            <div class="perfil-com-quizzes escondido">
+                <div>
+                    <p><strong>Seus Quizzes</strong></p>
+                    <ion-icon name="add-circle" onclick="criarQuizzComeco()"></ion-icon>
+                </div>
+                <ul>  
+                </ul>
+            </div>
+        </section>
+
+        <section class="todos-os-quizzes">
+            <p><strong>Todos os quizzes</strong></p>
+            <ul>  
+            </ul>
+        </section>
+    </main>
+
+
+    <!--  PÁGINA DO QUIZZ  -->
+    <div class="pagina-quizz escondido">
+        <div class="topo-quizz">
+            <p></p>
+        </div>
+        <div class="fundo"></div>
+        <ul>
+            
+        </ul>
+        
+    </div>
+
+    <!--  TELA DE CRIAR QUIZZ  -->
+        <!--  TELA DE CRIAR QUIZZ COMEÇO -->
+    <main class="telas-criar-quizz criar-quizz-comeco escondido">   
+        <strong class="titulo-criar-quizz">Comece pelo começo</strong>
+
+        <ul>
+            <li><input type="text" placeholder="Título do seu quizz" required></li>
+            <li><input type="text" placeholder="URL da imagem do seu quizz" required></li>
+            <li><input type="text" placeholder="Quantidade de perguntas do quizz" required></li>
+            <li><input type="text" placeholder="Quantidade de níveis do quizz" required></li>
+        </ul>
+
+        <div class="botao-criacao-quizz" onclick="criarQuizzPerguntas();"> <span>Prosseguir pra criar perguntas</span></div>
+    </main>
+
+        <!--  TELA DE CRIAR QUIZZ PRGUNTAS -->
+
+    <main class="telas-criar-quizz criar-quizz-perguntas escondido">
+        <strong class="titulo-criar-quizz">Crie suas perguntas</strong>
+
+        <section id="pergunta1"></section>
+
+        <div class="botao-criacao-quizz" onclick="criarQuizzNiveis();"> <span>Prosseguir pra criar níveis</span></div>
+
+    </main>
+
+        <!-- TELA DE CRIAR QUIZZ NIVEIS -->
+
+    <main class="telas-criar-quizz criar-quizz-niveis escondido">
+        <strong class="titulo-criar-quizz">Agora, decida os níveis</strong>
+        
+        <section id="nivel1"></section>
+
+        <div class="botao-criacao-quizz" onclick="criarQuizzFinal();"> <span>Finalizar Quizz</span></div>
+
+    </main>
+
+        <!-- TELA DE CRIAR QUIZZ FINAL -->
+
+    <main class="telas-criar-quizz criar-quizz-final escondido">
+        <strong class="titulo-criar-quizz">Seu quizz está pronto</strong>
+
+        <section class="img-quizz-criado">
+            <div class="degrade">
+                <span>O quão Potterhead é você?</span>
+            </div>
+        </section>
+
+        <div class="botao-criacao-quizz" onclick="abrirQuizzCriado(this);"> <span>Acessar Quizz</span></div>
+        <span onclick="voltarHome();"> <span>Voltar pra home</span>
+
+    </main>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/criacaoQuizz.js"></script>
+    <script src="js/paginaQuizzes.js"></script>
+</body>
+</html>
